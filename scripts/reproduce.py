@@ -1139,10 +1139,10 @@ if __name__ == '__main__':
     # ─── Run Main Experiment ──────────────────────────────────────────────────
     results = run_sphere_experiment(
         d=8,           # intrinsic dimension (8-sphere as in paper)
-        D=32,          # ambient dimension (paper uses D=64; reduced for CPU)
-        N_train=20_000,  # paper uses up to 8M; reduced for CPU demo
+        D=64,          # ambient dimension (paper uses D=64; reduced for CPU)
+        N_train=100_000,  # paper uses up to 8M; reduced for CPU demo
         N_test=500,
-        num_epochs=300,
+        num_epochs=1000,
         device=device
     )
 
