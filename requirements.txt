@@ -1,2 +1,30 @@
-numpy>=1.24
-scipy>=1.10
+# ============================================================
+# Riemannian Metric Matching — Reproduction
+# Bamberger et al., GRaM @ ICLR 2026
+# ============================================================
+#
+# INSTALL (CPU only):
+#   pip install -r requirements.txt
+#
+# INSTALL (GPU, CUDA 12.x — recommended for full paper config):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#   pip install -r requirements.txt --ignore-installed torch torchvision
+#
+# GOOGLE COLAB (GPU):
+#   torch and torchvision are pre-installed; just run:
+#   pip install tqdm scipy matplotlib numpy
+# ============================================================
+
+# Core deep learning
+torch>=2.0.0
+torchvision>=0.15.0        # needed only if you extend to MNIST/image experiments
+
+# Numerical computing
+numpy>=1.24.0
+scipy>=1.10.0              # used for sparse matrix ops in optional extensions
+
+# Visualisation
+matplotlib>=3.7.0
+
+# Progress bars (used in training loop)
+tqdm>=4.65.0
